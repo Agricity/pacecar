@@ -48,7 +48,7 @@ module Pacecar
           rescue Mysql2::Error, ActiveRecord::StatementInvalid
             Array.new
           end
-        when 'SQLite', 'PostgreSQL'
+        when 'SQLite', 'PostgreSQL', 'PostGIS'
           begin
             columns
           rescue ActiveRecord::StatementInvalid # If the table does not exist
